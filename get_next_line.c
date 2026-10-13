@@ -120,6 +120,7 @@ char *get_next_line(int fd)
     if (!str_append_str(&ret,b))
     {
         tmp[1] = c;
+        b[0] = '\0';
         free(ret);
         return (NULL);
     }
