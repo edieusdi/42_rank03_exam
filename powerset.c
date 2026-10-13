@@ -34,7 +34,7 @@ void    search (char **argv, int *selected, int index, long long sum)
 int main (int argc, char **argv)
 {
     int *selected;
-    if (argc < 3)
+    if (argc < 2)
         return(1);
     selected = calloc(argc, sizeof(int));
     if(!selected)
