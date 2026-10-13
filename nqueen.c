@@ -4,29 +4,29 @@
 
 void print_solution(int *positions, int n)
 {
-    int i = 0;
+    int index = 0;
 
-    while (i < n)
+    while (index < n)
     {
-        if (i > 0)
+        if (index > 0)
             printf(" ");
-        printf("%d", positions[i]);
-        i++;
+        printf("%d", positions[index]);
+        index++;
     }
     printf("\n");
 }
 
 int is_safe(int *positions, int col, int row)
 {
-    int i = 0;
+    int index = 0;
 
-    while (i < col)
+    while (index < col)
     {
-        if (positions[i] == row ||
-            positions[i] + col - i == row ||
-            positions[i] - (col - i) == row)
+        if (positions[index] == row ||
+            positions[index] + col - index == row ||
+            positions[index] - (col - index) == row)
             return (0);
-        i++;
+        index++;
     }
     return (1);
 }
